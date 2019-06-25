@@ -6,7 +6,7 @@ import listdata from '../js/listdata.js';
 
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
-const originalColors = ['#a98cc19e', '#add8e6bf', '#f01a21', '#55c3dc', '#dfe0e53d'];
+const originalColors = ['#502682', '#C2E2ED', '#f01a21', '#55c3dc', '#F7F8F9'];
 
 const pluginWrapper = () => {
     /**
@@ -54,6 +54,7 @@ class Experience extends React.Component {
 
   render() {
     const { fullpages } = this.state;
+    const { sectionsColor } = this.state;
     return (
       <ExperienceStyle>
         <ReactFullpage
@@ -66,18 +67,19 @@ class Experience extends React.Component {
           pluginWrapper={pluginWrapper}
           render={comp => (
             <ReactFullpage.Wrapper>
-              {fullpages.map(({ text, desc, opacity, img, mywork, tech }) => (
+              {fullpages.map(({ text, desc, opacity, img, mywork, tech, id }) => (
                   <ExpListItem
-                    
+                        key={id}
+                        index={id}
                         text={text}
-                        desc={desc}
+                        desc={desc} 
                         opacity={opacity}
-                        tech={tech}
-                        mywork={mywork}
                         img={img}
+                        mywork={mywork}
+                        tech={tech} 
                         SEL={SEL}
-                        sectionsColor={this.state.sectionsColor}
-                  />    
+                        sectionsColor={sectionsColor[id]}
+                  /> 
               ))}
             </ReactFullpage.Wrapper>
           )}
@@ -100,10 +102,11 @@ const ExperienceStyle = styled.div`
 
   .background{
     margin: auto;
-    height: 97%;
-    width: 98%;
+    height: 100%;
+    width: 100%;
     border-radius: 8px;
     background-size: cover;
+    position: relative;   
   }
 
   .custom-section{
@@ -114,30 +117,6 @@ const ExperienceStyle = styled.div`
     -webkit-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
     -moz-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
     box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
-  }
-
-  .content-box{
-    height: 100%;
-    width: 25%;
-  }
-
-  h1{
-    padding: 25px;
-    font-size: 2rem;
-    color: white;
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-  }
-  h2{font-weight: 600}
-  h2, p, button{
-    display: block;
-    padding-left: 25px;
-    color: white;
-    font-size: 1.2rem;
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
   }
 `;
 

@@ -1,4 +1,5 @@
 const listdata = [{
+        id: '0',
         text: 'souvinear',
         desc: 'omg',
         mywork: 'branding - design - user experience - front end development',
@@ -7,6 +8,7 @@ const listdata = [{
         opacity: '1'
     },
     {   
+        id: '1',
         text: 'independence blue cross',
         desc: 'health care!!!',
         mywork: 'user experience reasearch - wireframing - high-fidelity mockups - client presentation',
@@ -15,6 +17,7 @@ const listdata = [{
         opacity: '1'
     },
     {
+        id: '2',
         text: 'obey giant',
         desc: 'shop front for Obey Giant prints',
         mywork: 'wireframing, high-fidelity mockups, front end development, back end database implimentation',
@@ -23,6 +26,7 @@ const listdata = [{
         opacity: '1'
     },
     {
+        id: '3',
         text: 'bitepick',
         desc: 'bazinga',
         mywork: 'design, ux, front-end development',
@@ -31,7 +35,8 @@ const listdata = [{
         opacity: '1'
     },
     {
-        text: '...extraneous design work',
+        id: '4',
+        text: '...work continued',
         desc: '',
         img: '',
         opacity: '1'
