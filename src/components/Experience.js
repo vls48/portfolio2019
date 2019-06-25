@@ -6,7 +6,7 @@ import listdata from '../js/listdata.js';
 
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
-const originalColors = ['#502682', '#C2E2ED', '#f01a21', '#55c3dc', '#F7F8F9'];
+const originalColors = ['#502682', '#989898', '#1b1b1b', '#3d8d9e', '#F7F8F9'];
 
 const pluginWrapper = () => {
     /**
@@ -67,7 +67,7 @@ class Experience extends React.Component {
           pluginWrapper={pluginWrapper}
           render={comp => (
             <ReactFullpage.Wrapper>
-              {fullpages.map(({ text, desc, opacity, img, mywork, tech, id }) => (
+              {fullpages.map(({ text, desc, opacity, img, mywork, tech, id, accentColor }) => (
                   <ExpListItem
                         key={id}
                         index={id}
@@ -78,6 +78,7 @@ class Experience extends React.Component {
                         mywork={mywork}
                         tech={tech} 
                         SEL={SEL}
+                        accentColor={accentColor}
                         sectionsColor={sectionsColor[id]}
                   /> 
               ))}
@@ -104,9 +105,13 @@ const ExperienceStyle = styled.div`
     margin: auto;
     height: 100%;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     background-size: cover;
     position: relative;   
+    background-position: center;
+    overflow:auto;
+    background-color: #00000047;
+    background-blend-mode: multiply;
   }
 
   .custom-section{
