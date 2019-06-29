@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 //import { ViewButton } from './styles/ButtonStyles';
+import Underline from './styles/Underline';
 import styled from 'styled-components';
+
 
 class ExpListItem extends Component {
 
@@ -15,29 +17,41 @@ class ExpListItem extends Component {
   }
 
   render() {
-    const { text, desc, opacity, img, SEL, tech, mywork, sectionsColor, accentColor } = this.props;
+    const { text, desc, opacity, img, SEL, tech, mywork, sectionsColor, accentColor, index, lastItem } = this.props;
+
+
+    let last;
+    if (index === lastItem) {
+      last = <button type="button" > last </button>;
+    } else {
+      last = <div>{lastItem} {index}</div>;
+    }
+
     return (
         <ContentStyle key={text} className={SEL} style={{opacity: `${opacity}`, transition: 'opacity 0.5s ease-out'}} color={sectionsColor} accentColor={accentColor}>  
             <div className="background" style={{backgroundImage: `url(${img})`}} >
-                <div className="content-box" > 
-
-                    
+                <div className="content-box">    
                     <div className="content-text">
-                    <h1>{text}</h1> 
-                    <div className="content-text-sec"><h3>{desc}</h3></div>
-                        
-                        <div className="content-text-sec">
+                        <h1>{text}</h1> 
+                        <h3>{desc}</h3>
+                        <Underline color={sectionsColor} width={"45px"}>
+                        </Underline>
+                        <div className="content-text-sec role">
+                            <h2>My role </h2>
                             <p>{mywork}</p>
-                            <h2>What I Worked On </h2>
                         </div>
                         <div className="content-text-sec">
+                            <h2>My tools </h2>
                             <p>{tech}</p>
-                            <h2>Tools I Used </h2>
                         </div>
-                        
+                        <Underline color={sectionsColor} width={"80px"}>
+                        </Underline>
+                        <div className="content-buttons">
+                            <button type="button" value={text} onClick={this.handleClick}>View Demo ❯❯</button> 
+                            <button type="button" value={text} onClick={this.handleClick}>View Case Study ❯❯</button> 
+                            {last}
+                        </div>
                     </div>
-                    <button type="button" value={text} onClick={this.handleClick}>View ❯❯</button> 
-            
                 </div>
             </div>
         </ContentStyle> 
@@ -49,76 +63,78 @@ export default ExpListItem;
 
 const ContentStyle = styled.div`
 .content-box{
-    position: absolute;
-    bottom: 100px;
     width: 100%;
-    padding-bottom: 85px;
+    position: absolute;
+    bottom: 110px;
   }
 
 .content-text{
-    display: flex;
-    margin-bottom: 10px;
-    background-color: ${(props) => props.accentColor};
-    width: 100%;
+    width: 50%;
+    height: 100%;
 }
 
 .content-text-sec{
-    display: inline-block;
-    margin: 15px 15px 0px 0px;
-    width: 33%;
-    text-align: right;
-    position: relative;
+    margin: 5px 15px 0px 0px;
+}
+
+.role{
+    padding-top: 20px;
+}
+.content-buttons{
+    padding-left: 45px;
 }
 
 h1{
     z-index: 1;
-    font-size: 5.8rem;
-    color: white;
-    text-align: center;
-    margin: auto;
+    font-size: 7.5rem;
+    color: transparent;
+    margin: 0;
+    padding: 45px 45px 10px 45px;
     width: 100%;
     font-family: 'Roboto',sans-serif;
     font-weight: 700;
-    -webkit-text-stroke-width: 1px;
-    text-shadow: 0px 0px 4px ${(props) => props.accentColor};
-  }
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}
+
 h3{
     color: white;
     font-weight: 300;
-    padding-left: 15px;
-    font-size: 1.3rem;
-    float: left;
+    font-size: 1.2rem;
+    margin: 0;
+    padding-left: 45px;
 }
 h2{
       font-weight: 700;
       color: white;
-      margin-top: 10px;
+      margin: 0px;
       font-size: 0.9rem;
-      letter-spacing: 1px
+      letter-spacing: 1px;
+      display: inline-block;
       text-transform: uppercase;
-      text-decoration: overline;
-      position: absolute;
-      right: 0;
-      bottom: 0;
+      padding: 3px 0px 0px 45px;
+      width: 130px;
+
   }
  p{
     color: white;
-    font-size: 1rem;
+    max-width: 75%;
+    word-spacing: 10px;
+    font-size: 0.8rem;
+    display: inline-block;
     margin: 0px;
-    font-weight: 300;
+    font-weight: 500;
     font-family: 'Roboto', sans-serif;
     text-transform: capitalize;
-    position: absolute;
-    right: 0;
-    bottom: 40px;
+    padding-left: 45px;
+
   }
   button{
-      float: right;
-      width: 150px;
+      width: 165px;
       height: 38px;
       border-color: white;
       border-radius: 5px;
-      margin: 15px;
+      margin-right: 15px;
       color: white;
       font-size: 0.8rem;
       font-family: 'Roboto', sans-serif;

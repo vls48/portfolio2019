@@ -80,6 +80,7 @@ class Experience extends React.Component {
                         SEL={SEL}
                         accentColor={accentColor}
                         sectionsColor={sectionsColor[id]}
+                        lastItem={fullpages.length-1}
                   /> 
               ))}
             </ReactFullpage.Wrapper>
@@ -117,7 +118,7 @@ const ExperienceStyle = styled.div`
   .custom-section{
     overflow: auto;
     margin: 25px 0px;
-    border-radius: 15px;
+    border-radius: 10px;
     position: relative;
     -webkit-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
     -moz-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
