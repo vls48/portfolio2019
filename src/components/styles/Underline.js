@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Underline = ({color, width}) => {
     return(    
-    <UnderlineStyle  color={color} width={width}>
+    <UnderlineStyle  className="divider" color={color} width={width}>
     </UnderlineStyle>
     );
 };

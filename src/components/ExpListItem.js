@@ -20,11 +20,25 @@ class ExpListItem extends Component {
     const { text, desc, opacity, img, SEL, tech, mywork, sectionsColor, accentColor, index, lastItem } = this.props;
 
 
-    let last;
-    if (index === lastItem) {
-      last = <button type="button" > last </button>;
+    let content;
+    if (index == lastItem) {
+      content = null;
     } else {
-      last = <div>{lastItem} {index}</div>;
+      content = 
+      <><div className="content-text-sec role">
+            <h2>My role </h2>
+            <p>{mywork}</p>
+        </div>
+        <div className="content-text-sec">
+            <h2>My tools </h2>
+            <p>{tech}</p>
+        </div>
+        <Underline className="secondDivider" color={sectionsColor} width={"80px"}>
+        </Underline>
+        <div className="content-buttons">
+            <button type="button" value={text} onClick={this.handleClick}>View Demo ❯❯</button> 
+            <button type="button" value={text} onClick={this.handleClick}>View Case Study ❯❯</button> 
+        </div></>
     }
 
     return (
@@ -36,21 +50,7 @@ class ExpListItem extends Component {
                         <h3>{desc}</h3>
                         <Underline color={sectionsColor} width={"45px"}>
                         </Underline>
-                        <div className="content-text-sec role">
-                            <h2>My role </h2>
-                            <p>{mywork}</p>
-                        </div>
-                        <div className="content-text-sec">
-                            <h2>My tools </h2>
-                            <p>{tech}</p>
-                        </div>
-                        <Underline color={sectionsColor} width={"80px"}>
-                        </Underline>
-                        <div className="content-buttons">
-                            <button type="button" value={text} onClick={this.handleClick}>View Demo ❯❯</button> 
-                            <button type="button" value={text} onClick={this.handleClick}>View Case Study ❯❯</button> 
-                            {last}
-                        </div>
+                        {content}
                     </div>
                 </div>
             </div>
@@ -64,13 +64,14 @@ export default ExpListItem;
 const ContentStyle = styled.div`
 .content-box{
     width: 100%;
-    position: absolute;
-    bottom: 110px;
+    background-color: rgba(0,0,0,0.25);
+    height: 100%;
   }
 
 .content-text{
     width: 50%;
-    height: 100%;
+    position: absolute;
+    bottom: 100px;
 }
 
 .content-text-sec{
@@ -82,6 +83,7 @@ const ContentStyle = styled.div`
 }
 .content-buttons{
     padding-left: 45px;
+    pointer-events: initial;
 }
 
 h1{
@@ -95,6 +97,7 @@ h1{
     font-weight: 700;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
+    letter-spacing: 0.025em;
 }
 
 h3{
@@ -103,6 +106,7 @@ h3{
     font-size: 1.2rem;
     margin: 0;
     padding-left: 45px;
+    text-shadow: 0px 0px 5px #0000005e;
 }
 h2{
       font-weight: 700;
@@ -114,6 +118,7 @@ h2{
       text-transform: uppercase;
       padding: 3px 0px 0px 45px;
       width: 130px;
+      text-shadow: 0px 0px 5px #0000005e;
 
   }
  p{
@@ -123,10 +128,12 @@ h2{
     font-size: 0.8rem;
     display: inline-block;
     margin: 0px;
-    font-weight: 500;
+    font-weight: 300;
     font-family: 'Roboto', sans-serif;
     text-transform: capitalize;
     padding-left: 45px;
+    opacity: 0.75;
+    text-shadow: 0px 0px 5px #0000005e;
 
   }
   button{
@@ -149,4 +156,85 @@ h2{
     background-color: ${(props) => props.color};
     transition: all 0.3s ease-in-out;
 }
+
+@media (max-width: 84em) {
+    .content-box{
+        background-color: rgba(0,0,0,0.65);
+        transition: all 0.3s ease-in;
+    }
+  }
+  @media (max-width: 64em) {
+    .content-box{
+        background-color: rgba(0,0,0,0.80);
+        transition: all 0.3s ease-in;
+    }
+    .content-text{
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease-in;
+    }
+    .content-text-sec{
+        margin: 10px 15px;
+    }
+    h2{
+        width: 100%;
+        padding: 0;
+    }
+    h1{
+        font-size: 6rem;
+        padding: 0px 0px 5px 0px;
+    }
+    .divider{
+        width: 100%;
+        padding: 0px;
+        height: 1px;
+        margin: 25px 0px;
+        transition: all 0.5s ease-in;
+    }
+    .divider ~ .divider {
+        opacity: 0;
+        display: none;
+        transition: all 0.3s ease-in;
+    }
+    h3{
+        padding-right: 45px;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+        line-height: 1.3rem;
+    }
+    button{
+        width: 225px;
+        margin: 15px 15px 0px 15px;
+    }
+    .content-buttons{
+        padding-left: 0;
+        margin-top: 30px;
+    }
+    p{
+        max-width: 90%;
+        line-height: 1.3rem;
+        padding: 5px 0px;
+        opacity: 0.65;
+
+    }
+  }
+  @media (max-width: 54em) {
+    h1{
+        font-size: 5rem;
+        transition: all 0.3s ease-in-out;
+    }
+  }
+  @media (max-width: 36em) {
+    .content-text{
+        bottom: 120px;
+    }
+    h1{
+        font-size: 4rem;
+        transition: all 0.3s ease-in-out;
+    }
+    button{
+        width: 90%;
+        height: 48px;
+    }
+  }
 `;

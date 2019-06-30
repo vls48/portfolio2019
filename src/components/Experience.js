@@ -6,7 +6,7 @@ import listdata from '../js/listdata.js';
 
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
-const originalColors = ['#502682', '#989898', '#1b1b1b', '#3d8d9e', '#F7F8F9'];
+const originalColors = ['#502682', '#989898', '#D41E29', '#5AC3DA', '#F7F8F9'];
 
 const pluginWrapper = () => {
     /**
@@ -98,6 +98,10 @@ const ExperienceStyle = styled.div`
   margin: auto;
   padding: 0px 65px;
 
+  .fullpage-wrapper{
+      pointer-events: none;
+  }
+
   .wapper{
       margin: 15px;
   }
@@ -109,15 +113,13 @@ const ExperienceStyle = styled.div`
     border-radius: 10px;
     background-size: cover;
     position: relative;   
-    background-position: center;
+    background-position: right center;
     overflow:auto;
-    background-color: #00000047;
-    background-blend-mode: multiply;
   }
 
   .custom-section{
     overflow: auto;
-    margin: 25px 0px;
+    margin: 5px 0px 25px 0px;
     border-radius: 10px;
     position: relative;
     -webkit-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);

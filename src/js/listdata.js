@@ -1,40 +1,40 @@
 const listdata = [{
         id: '0',
         text: 'souvinear',
-        desc: 'A native app focused on proximity-based music discovery',
-        mywork: 'branding / design / user experience / front end development',
-        tech: 'Swift / Xcode / Google Maps API / Spotify API / Figma / Sketch',
-        img: './img/svnr-header.png',
+        desc: 'A native iOS app startup focused on proximity-based music discovery',
+        mywork: 'branding / user-experience-reasearch / wireframing / high-fidelity-mockups / front-end-development',
+        tech: 'Swift / Xcode / Google-Maps-API / Spotify-API / Figma / Sketch',
+        img: './img/svnr-final.png',
         opacity: '1',
         accentColor: '#1b0822bf'
     },
     {   
         id: '1',
         text: 'IBX',
-        desc: 'Desktop and mobile solutions for Philadelphia`s largest health insurer, serving 7 million people wordwide',
-        mywork: 'user experience reasearch / wireframing / high-fidelity mockups / client presentation',
+        desc: 'Desktop and mobile solutions for Philadelphia`s largest health insurer, Indenpendence Blue Cross. Designs were created for IBX`s member portal serving 7 million people nationwide',
+        mywork: 'user-experience-reasearch / wireframing / high-fidelity-mockups / client-presentation',
         tech: 'Figma',
-        img: './img/ibx-header.png',
+        img: './img/ibx-final.png',
         opacity: '1',
         accentColor: '#0b394fc4'
     },
     {
         id: '2',
         text: 'Obey Giant',
-        desc: 'A webpage storefront with persisting state ',
-        mywork: 'wireframing / high-fidelity mockups / developement',
+        desc: 'A mock web page storefront for Obey Giant poster prints. Features include a `user view` and an `admin view` that dynamically updates a database based on input.',
+        mywork: 'wireframing / high-fidelity-mockups / development',
         tech: 'HTML / CSS / React.Js / Firebase',
-        img: './img/obey-header.png',
+        img: './img/obey-final.png',
         opacity: '1',
-        accentColor: '#0e0303e6'
+        accentColor: '#D41E29'
     },
     {
         id: '3',
         text: 'Bitepick',
         desc: 'Pick your filters and have a Drexel food spot recommended to you when you shake your device',
-        mywork: 'design / user experience / development',
+        mywork: 'design / user-experience / development',
         tech: 'HTML / CSS / jQuery',
-        img: './img/bitepick-header.png',
+        img: './img/bitepick-final.png',
         opacity: '1',
         accentColor: '#012f3973'
     },
