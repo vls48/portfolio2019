@@ -39,9 +39,10 @@ class ExpListItem extends Component {
                 <Underline className="secondDivider" color={sectionsColor} width={"80px"}>
                 </Underline>
                 <div className="content-buttons">
-                    {demo.exists ? (<Link to={demo.link}><ButtonStyle color={sectionsColor} type="button" >View Demo ❯❯</ButtonStyle></Link>) : ''}
+                    {demo.exists ? (<Link to={{pathname: `${demo.link}`}}><ButtonStyle color={sectionsColor} type="button" >View Demo ❯❯</ButtonStyle></Link>) : ''}
 
-                    {casestudy.exists ? (<Link to={text}><ButtonStyle color={sectionsColor} type="button" value={casestudy.content}>View Case Study ❯❯</ButtonStyle></Link>) : ''}
+                    {casestudy.exists ? (<Link to={{
+                        pathname: `${text}`}}><ButtonStyle color={sectionsColor} type="button" value={casestudy.content}>View Case Study ❯❯</ButtonStyle></Link>) : ''}
                 </div></>
             }
 

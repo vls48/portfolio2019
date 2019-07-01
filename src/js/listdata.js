@@ -13,7 +13,17 @@ const listdata = [{
         },
         casestudy: {
             exists: true,
-            content: ''
+            content: {
+                title: 'souvinear',
+                desc: '',
+                headerimg: '',
+                timeframe: '',
+                overview: '',
+                problem: '',
+                process: '',
+                solution: '',
+                future: ''
+            }
         }
     },
     {   
@@ -31,7 +41,27 @@ const listdata = [{
         },
         casestudy: {
             exists: true,
-            content: ''
+            content:{
+                title: 'Indeprendence Blue Cross',
+                desc: '',
+                headerimg: '',
+                timeframe: '',
+                overview: '',
+                project1: {
+                    title: '',
+                    overview: '',
+                    problem: '',
+                    process: '',
+                    solution: '',
+                },
+                project2: {
+                    title: '',
+                    overview: '',
+                    problem: '',
+                    process: '',
+                    solution: '',
+                }
+            }
         }
     },
     {
