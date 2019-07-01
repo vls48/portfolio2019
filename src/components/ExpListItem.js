@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-//import { ViewButton } from './styles/ButtonStyles';
+import ButtonStyle from './styles/ButtonStyle';
 import Underline from './styles/Underline';
+import H1 from './styles/H1';
 import styled from 'styled-components';
 
 
@@ -36,8 +37,8 @@ class ExpListItem extends Component {
         <Underline className="secondDivider" color={sectionsColor} width={"80px"}>
         </Underline>
         <div className="content-buttons">
-            <button type="button" value={text} onClick={this.handleClick}>View Demo ❯❯</button> 
-            <button type="button" value={text} onClick={this.handleClick}>View Case Study ❯❯</button> 
+            <ButtonStyle color={sectionsColor} type="button" value={text} onClick={this.handleClick}>View Demo ❯❯</ButtonStyle> 
+            <ButtonStyle color={sectionsColor} type="button" value={text} onClick={this.handleClick}>View Case Study ❯❯</ButtonStyle> 
         </div></>
     }
 
@@ -46,7 +47,7 @@ class ExpListItem extends Component {
             <div className="background" style={{backgroundImage: `url(${img})`}} >
                 <div className={"content-box entry" + (index)}>    
                     <div className="content-text">
-                        <h1>{text}</h1> 
+                        <H1 content={text}></H1> 
                         <h3>{desc}</h3>
                         <Underline color={sectionsColor} width={"45px"}>
                         </Underline>
@@ -103,7 +104,6 @@ const ContentStyle = styled.div`
         }   
     }
 }
-
 .content-box:nth-child(2){
     background-color: rgba(0,0,0,0);
   }
@@ -124,20 +124,6 @@ const ContentStyle = styled.div`
 .content-buttons{
     padding-left: 45px;
     pointer-events: initial;
-}
-
-h1{
-    z-index: 1;
-    font-size: 7.5rem;
-    color: transparent;
-    margin: 0;
-    padding: 45px 45px 10px 45px;
-    width: 100%;
-    font-family: 'Roboto',sans-serif;
-    font-weight: 700;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: white;
-    letter-spacing: 0.025em;
 }
 
 h3{
@@ -176,26 +162,6 @@ h2{
     text-shadow: 0px 0px 5px #0000005e;
 
   }
-  button{
-      width: 165px;
-      height: 38px;
-      border-color: white;
-      border-radius: 5px;
-      margin-right: 15px;
-      color: white;
-      font-size: 0.8rem;
-      font-family: 'Roboto', sans-serif;
-      text-transform: uppercase;
-      font-weight: 400;
-      background-color: rgba(255,255,255,0);
-      transition: all 0.3s ease-in-out;
-  }
-  button:hover{
-    font-weight: 600;
-    border-color: ${(props) => props.color};
-    background-color: ${(props) => props.color};
-    transition: all 0.3s ease-in-out;
-}
 
 @media (max-width: 84em) {
     .content-box{
