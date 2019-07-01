@@ -6,54 +6,118 @@ import ButtonStyle from './styles/ButtonStyle';
 
 const accentColor='#21B89A';
 const baseColor='#747474';
+const jobTitles = ['visual designer', 'developer', 'ux designer', 'creative'];
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Git', 'Wireframing', 'Usability Testing', 'Swift']
+const tools = ['Sketch', 'Invision', 'Figma', 'Adobe Creative Suite', 'Xcode']
 
+class About extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        jobTitleIdx: 0
+      };
+    }
 
-const About = () => (
-    <>
-        <AboutStyle baseColor={baseColor} accentColor={accentColor}>
-            <H1 color={baseColor} size="4.5rem;" content="VICTORIA STEWART"></H1>
-            <span>design / code / user experience</span>
-            <p>hi, im a Philadelphia-based <span>insert many things</span> with a passion for creating experiences- from concept to code</p>
-            <p className="tagline">'find me where art and technology collide'</p>
-            <Underline buttoncolor={accentColor} color={accentColor} height="1px"></Underline>
-            <h2>or just contact me here:</h2>
-            <div className="button-cont">
-                <ButtonStyle buttoncolor={accentColor} color={accentColor} type="button" onClick="{this.handleClick}">email ❯❯</ButtonStyle>
-            </div>
+    componentDidMount() {
+        this.timeout = setInterval(() => {
+          let currentIdx = this.state.jobTitleIdx;
+          this.setState({ jobTitleIdx: currentIdx + 1 });
+        }, 1500);
+      }
 
-        </AboutStyle>
-    </>
-);
+    componentDidUnmount() {
+        clearInterval(this.timeout);
+      }
+
+        render() {
+            let title = jobTitles[this.state.jobTitleIdx % jobTitles.length];
+            return (
+            <AboutStyle baseColor={baseColor} accentColor={accentColor}>
+                <H1 color={baseColor} size="3.8rem;" content="VICTORIA STEWART"></H1>
+                <span> design / code / user experience</span>
+                <p>hi, I'm a Philadelphia-based <span className="changingText">{title}</span> with a passion for creating experiences- from    <span className="inlineText"><img src="./img/design.png" alt="design icon" height="25"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;concept</span>  to <span className="inlineText">&lt;&#47; code &gt; </span></p>
+                <p className="knowledge">my knowledge at this time includes</p>
+                <div>
+                    <ul>{skills.map((item, index) => (
+                    <li key={index}>{item}</li>
+                    ))}</ul>
+                </div>
+                <div>
+                    <ul>{tools.map((item, index) => (
+                    <li key={index}>{item}</li>
+                    ))}</ul>
+                </div>
+                <p className="knowledge learning">&amp; I'm always learning</p>
+                <Underline buttoncolor={accentColor} color={"#7474742b"} height="1px" width="90%"></Underline>      
+                <div className="button-cont">
+                    <h2>I'd love to get in contact, find me here:</h2>
+                    <a href="mailto:toristewart08@gmail.com" target="_top">
+                        <ButtonStyle buttoncolor={accentColor} color={accentColor} type="button" onClick="{this.handleClick}">email ❯❯</ButtonStyle>
+                    </a>
+                    <a href="https://www.linkedin.com/in/victoria-stewart-152399109/">
+                        <img src="./img/linkedin.png" alt="linkedin logo" height="38px"></img>
+                    </a>
+                </div>
+
+            </AboutStyle>
+        );
+    }
+}
 
 export default About;
 
 const AboutStyle = styled.div`
-    padding: 25px;
+    padding: 0px 25px 25px 25px;
     font-family: Roboto;
     h1{
-        padding: 0px;
-        margin: 0px;
+        padding: 0px 0px 0px 25px;
+        line-height: 3.7rem;
+        width: 20%;
     }
     span{
         color: ${(props) => props.accentColor || 'black'};
         font-weight: 700;
         letter-spacing: 0.045em;
-        font-size: 1.2rem;
-        padding: 0px 0px 15px 15px;
+        font-size: 1.1rem;
+        padding: 0px 0px 15px 30px;
+    }
+    span.inlineText {
+        color: ${(props) => props.baseColor || 'black'};
+        font-weight: 300;
+        font-size: 1.7rem;
+        padding: 0px 5px;
+        position: relative;
+    }
+
+    .inlineText img{
+        position: absolute;
+        bottom: 2px;
+    }
+
+    .changingText{
+        display: inline-block;
+        width: 255px;
+        font-size: 1.4rem;
+        background-color: #9595951f;
+        padding: 0;
+        border-radius: 10px;
     }
     p{
-        margin: 60px 0px;
+        margin: 75px auto 45px auto;
         font-weight: 300;
-        font-size: 2rem;
+        font-size: 1.7rem;
         line-height: 53px;
         text-align: center;
         letter-spacing: 0.125em;
         color: #959595;
+        width:80%;
     }
     .button-cont{
-        width: 100%;
-        display: flex;
+        display: inline-flex;
         justify-content: center;
+        align-items: center;
+        padding: 10px 25px 5px 0px;
+        float: right;
     }
     .tagline{
         margin:0px;
@@ -63,8 +127,46 @@ const AboutStyle = styled.div`
     }
     h2{
         color: ${(props) => props.baseColor || 'black'};
-        font-size: 1rem;
+        font-size: 1.3rem;
         text-align: center;
+        font-weight: 500;
+        padding-right: 25px;
+    }
+    ul{
+        list-style: none;
+        width: 100%;
+        text-align: center;
+        margin: 0px;
+    }
+    ul li{
+        font-size: 0.8rem;
+        color: #959595;
+        min-width: 30px;
+        text-align: center;
+        border: 1px solid ${(props) => props.accentColor || 'black'};
+        display: inline-block;
+        padding: 7px 15px;
+        margin: 5px 5px;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+
+    a img:hover{
+        opacity: 0.6;
+        transition: 0.3s all ease-in;
+    }
+    .knowledge{
+        color: ${(props) => props.baseColor || 'black'};
+        font-size: 1.1rem;
+        margin: 20px auto;
+        line-height: 20px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+    }
+   p.learning.knowledge{
+        font-size: 0.8rem;
         font-weight: 300;
+        margin: 6px auto 45px auto;
+        line-height: 15px;
     }
 `;

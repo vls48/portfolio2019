@@ -23,14 +23,14 @@ const HeaderStyle = styled.header`
     font-size: 1.1rem;
     margin: 0px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
   }
   a{
       color: rgb(60,60,60);
       text-decoration: none;
   }
   a:hover{
-      color: rgb(230,160,60);
+      color: #21B89A;
       transition: color 0.3s ease-in;
   }
 
