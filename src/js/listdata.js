@@ -6,7 +6,15 @@ const listdata = [{
         tech: 'Swift / Xcode / Google-Maps-API / Spotify-API / Figma / Sketch / Firebase',
         img: './img/svnr-final.png',
         opacity: '1',
-        accentColor: '#1b0822bf'
+        accentColor: '#1b0822bf',
+        demo: {
+            exists: false,
+            link: ''
+        },
+        casestudy: {
+            exists: true,
+            content: ''
+        }
     },
     {   
         id: '1',
@@ -16,17 +24,33 @@ const listdata = [{
         tech: 'Figma',
         img: './img/ibx-final.png',
         opacity: '1',
-        accentColor: '#0b394fc4'
+        accentColor: '#0b394fc4',
+        demo: {
+            exists: false,
+            link: ''
+        },
+        casestudy: {
+            exists: true,
+            content: ''
+        }
     },
     {
         id: '2',
         text: 'Obey Giant',
-        desc: 'A mock web page storefront for Obey Giant poster prints. Features include a `user view` and an `admin view` that dynamically updates a database based on input.',
+        desc: 'A mock web page storefront for Obey Giant poster prints. Features include a "user view" and an "admin view" that dynamically updates a database based on input.',
         mywork: 'wireframing / high-fidelity-mockups / development',
         tech: 'HTML / CSS / React.Js / Firebase',
         img: './img/obey-final.png',
         opacity: '1',
-        accentColor: '#D41E29'
+        accentColor: '#D41E29',
+        demo: {
+            exists: true,
+            link: '/obey'
+        },
+        casestudy: {
+            exists: false,
+            content: ''
+        }
     },
     {
         id: '3',
@@ -36,7 +60,15 @@ const listdata = [{
         tech: 'HTML / CSS / jQuery',
         img: './img/bitepick-final.png',
         opacity: '1',
-        accentColor: '#012f3973'
+        accentColor: '#012f3973',
+        demo: {
+            exists: true,
+            link: '/bitepick'
+        },
+        casestudy: {
+            exists: false,
+            content: ''
+        }
     },
     {
         id: '4',
@@ -44,7 +76,15 @@ const listdata = [{
         desc: '',
         img: '',
         opacity: '1',
-        accentColor: '#929495ad'
+        accentColor: '#929495ad',
+        demo: {
+            exists: true,
+            link: ''
+        },
+        casestudy: {
+            exists: false,
+            content: ''
+        }
     }
 ]
 

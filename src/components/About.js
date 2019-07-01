@@ -25,7 +25,7 @@ class About extends React.Component {
         }, 1500);
       }
 
-    componentDidUnmount() {
+    componentWillUnmount() {
         clearInterval(this.timeout);
       }
 
@@ -36,7 +36,7 @@ class About extends React.Component {
                 <H1 color={baseColor} size="3.8rem;" content="VICTORIA STEWART"></H1>
                 <span> design / code / user experience</span>
                 <p>hi, I'm a Philadelphia-based <span className="changingText">{title}</span> with a passion for creating experiences- from    <span className="inlineText"><img src="./img/design.png" alt="design icon" height="25"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;concept</span>  to <span className="inlineText">&lt;&#47; code &gt; </span></p>
-                <p className="knowledge">my knowledge at this time includes</p>
+                <p className="knowledge">my knowledge includes</p>
                 <div>
                     <ul>{skills.map((item, index) => (
                     <li key={index}>{item}</li>
@@ -55,7 +55,7 @@ class About extends React.Component {
                         <ButtonStyle buttoncolor={accentColor} color={accentColor} type="button" onClick="{this.handleClick}">email ❯❯</ButtonStyle>
                     </a>
                     <a href="https://www.linkedin.com/in/victoria-stewart-152399109/">
-                        <img src="./img/linkedin.png" alt="linkedin logo" height="38px"></img>
+                        <img src="./img/linkedin.png" alt="linkedin logo" height="36px"></img>
                     </a>
                 </div>
 
@@ -96,7 +96,7 @@ const AboutStyle = styled.div`
 
     .changingText{
         display: inline-block;
-        width: 255px;
+        width: 225px;
         font-size: 1.4rem;
         background-color: #9595951f;
         padding: 0;

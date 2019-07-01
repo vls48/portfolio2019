@@ -4,8 +4,9 @@ import styled from 'styled-components';
 
 const Header = () => (
   <HeaderStyle>
-    <div class="tooltip"><h2>i</h2>
-      <span class="tooltiptext">built with react ✌️</span>
+    <div className="tooltip"><h2>i</h2>
+      <span className="tooltiptext">built with react <span role="img" aria-label="peace sign">✌️</span>
+      </span>
     </div>
     <Link to="/experience"><h1>Experience</h1> </Link> 
     <Link to="/about"><h1>About</h1> </Link>       

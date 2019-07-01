@@ -67,7 +67,7 @@ class Experience extends React.Component {
           pluginWrapper={pluginWrapper}
           render={comp => (
             <ReactFullpage.Wrapper>
-              {fullpages.map(({ text, desc, opacity, img, mywork, tech, id, accentColor }) => (
+              {fullpages.map(({ text, desc, opacity, img, mywork, tech, id, accentColor, casestudy, demo }) => (
                   <ExpListItem
                         key={id}
                         index={id}
@@ -81,6 +81,8 @@ class Experience extends React.Component {
                         accentColor={accentColor}
                         sectionsColor={sectionsColor[id]}
                         lastItem={fullpages.length-1}
+                        demo={demo}
+                        casestudy={casestudy}
                   /> 
               ))}
             </ReactFullpage.Wrapper>

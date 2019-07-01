@@ -3,7 +3,7 @@ import ButtonStyle from './styles/ButtonStyle';
 import Underline from './styles/Underline';
 import H1 from './styles/H1';
 import styled from 'styled-components';
-
+import { Link } from 'react-router-dom';
 
 class ExpListItem extends Component {
 
@@ -14,33 +14,36 @@ class ExpListItem extends Component {
 
 
   handleClick = (event) => {
-      console.log("go to {this.props.} page");
+      console.log(event.currentTarget.value);
   }
 
   render() {
-    const { text, desc, opacity, img, SEL, tech, mywork, sectionsColor, accentColor, index, lastItem } = this.props;
+    const { text, desc, opacity, img, SEL, tech, mywork, sectionsColor, accentColor, index, lastItem, casestudy, demo } = this.props;
 
 
     let content;
     if (index == lastItem) {
-      content = null;
+    
+      content = <div className="content-buttons">
+                    <Link to='/more'><ButtonStyle color={sectionsColor} type="button">View More Work ❯❯</ButtonStyle></Link>
+                </div>
     } else {
-      content = 
-      <><div className="content-text-sec role">
-            <h2>My role </h2>
-            <p>{mywork}</p>
-        </div>
-        <div className="content-text-sec">
-            <h2>My tools </h2>
-            <p>{tech}</p>
-        </div>
-        <Underline className="secondDivider" color={sectionsColor} width={"80px"}>
-        </Underline>
-        <div className="content-buttons">
-            <ButtonStyle color={sectionsColor} type="button" value={text} onClick={this.handleClick}>View Demo ❯❯</ButtonStyle> 
-            <ButtonStyle color={sectionsColor} type="button" value={text} onClick={this.handleClick}>View Case Study ❯❯</ButtonStyle> 
-        </div></>
-    }
+      content = <><div className="content-text-sec role">
+                    <h2>My role </h2>
+                    <p>{mywork}</p>
+                </div>
+                <div className="content-text-sec">
+                    <h2>My tools </h2>
+                    <p>{tech}</p>
+                </div>
+                <Underline className="secondDivider" color={sectionsColor} width={"80px"}>
+                </Underline>
+                <div className="content-buttons">
+                    {demo.exists ? (<Link to={demo.link}><ButtonStyle color={sectionsColor} type="button" >View Demo ❯❯</ButtonStyle></Link>) : ''}
+
+                    {casestudy.exists ? (<Link to={text}><ButtonStyle color={sectionsColor} type="button" value={casestudy.content}>View Case Study ❯❯</ButtonStyle></Link>) : ''}
+                </div></>
+            }
 
     return (
         <ContentStyle key={text} className={SEL} style={{opacity: `${opacity}`, transition: 'opacity 0.5s ease-out'}} color={sectionsColor} accentColor={accentColor}>  
