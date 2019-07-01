@@ -1,9 +1,9 @@
 const listdata = [{
         id: '0',
         text: 'souvinear',
-        desc: 'A native iOS app startup focused on proximity-based music discovery',
+        desc: 'A native iOS app startup focused on proximity-based music discovery.',
         mywork: 'branding / user-experience-reasearch / wireframing / high-fidelity-mockups / front-end-development',
-        tech: 'Swift / Xcode / Google-Maps-API / Spotify-API / Figma / Sketch',
+        tech: 'Swift / Xcode / Google-Maps-API / Spotify-API / Figma / Sketch / Firebase',
         img: './img/svnr-final.png',
         opacity: '1',
         accentColor: '#1b0822bf'
@@ -11,7 +11,7 @@ const listdata = [{
     {   
         id: '1',
         text: 'IBX',
-        desc: 'Desktop and mobile solutions for Philadelphia`s largest health insurer, Indenpendence Blue Cross. Designs were created for IBX`s member portal serving 7 million people nationwide',
+        desc: 'Desktop and mobile solutions for Philadelphia`s largest health insurer, Indenpendence Blue Cross. Designs were created for IBX`s member portal serving 7 million people nationwide.',
         mywork: 'user-experience-reasearch / wireframing / high-fidelity-mockups / client-presentation',
         tech: 'Figma',
         img: './img/ibx-final.png',
@@ -31,7 +31,7 @@ const listdata = [{
     {
         id: '3',
         text: 'Bitepick',
-        desc: 'Pick your filters and have a Drexel food spot recommended to you when you shake your device',
+        desc: 'Pick your filters and have a Drexel food spot recommended to you when you shake your device.',
         mywork: 'design / user-experience / development',
         tech: 'HTML / CSS / jQuery',
         img: './img/bitepick-final.png',

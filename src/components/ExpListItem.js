@@ -44,7 +44,7 @@ class ExpListItem extends Component {
     return (
         <ContentStyle key={text} className={SEL} style={{opacity: `${opacity}`, transition: 'opacity 0.5s ease-out'}} color={sectionsColor} accentColor={accentColor}>  
             <div className="background" style={{backgroundImage: `url(${img})`}} >
-                <div className="content-box">    
+                <div className={"content-box entry" + (index)}>    
                     <div className="content-text">
                         <h1>{text}</h1> 
                         <h3>{desc}</h3>
@@ -64,8 +64,48 @@ export default ExpListItem;
 const ContentStyle = styled.div`
 .content-box{
     width: 100%;
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(0,0,0,0.15);
     height: 100%;
+  }
+.entry1{
+    background-color: rgba(255,255,255,0.09);
+    h1{
+       -webkit-text-stroke-color: #168DCA; 
+    }
+    .content-text h2, p, h3{
+        color: #313131;
+        text-shadow: 0px 0px 4px #00000014;
+    }
+    .content-text p, h3{
+        opacity: 0.8;
+    }
+    button{
+        color: #168DCA;
+        border-color: #168DCA;
+    }
+    button:hover{
+        color:white;
+    }
+    @media (max-width: 84em) {
+        .content-text h2, p, h3{
+            color: white;
+        }
+    }
+}
+.entry2{
+    h1{
+        font-size: 6.75rem;
+        padding-right: 0px;
+    }
+    @media (max-width: 84em) {
+        h1{
+            font-size: 4.8rem;
+        }   
+    }
+}
+
+.content-box:nth-child(2){
+    background-color: rgba(0,0,0,0);
   }
 
 .content-text{
@@ -183,6 +223,7 @@ h2{
     h1{
         font-size: 6rem;
         padding: 0px 0px 5px 0px;
+        -webkit-text-stroke-color: ${(props) => props.color};
     }
     .divider{
         width: 100%;
@@ -205,6 +246,11 @@ h2{
     button{
         width: 225px;
         margin: 15px 15px 0px 15px;
+        border-color: ${(props) => props.color};
+        color: ${(props) => props.color};
+    }
+    button:hover{
+        color: white;
     }
     .content-buttons{
         padding-left: 0;

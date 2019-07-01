@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Header = () => (
   <HeaderStyle>
     <div class="tooltip"><h2>i</h2>
-      <span class="tooltiptext">site built with react</span>
+      <span class="tooltiptext">built with react ✌️</span>
     </div>
     <Link to="/experience"><h1>Experience</h1> </Link> 
     <Link to="/about"><h1>About</h1> </Link>       
@@ -58,6 +58,8 @@ const HeaderStyle = styled.header`
     opacity: 0;
     font-size: 0.8rem;
     width: 135px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     background-color: transparent;
     border: 1px solid rgb(60,60,60);
     color: rgb(60,60,60);
