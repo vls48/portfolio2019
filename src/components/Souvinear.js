@@ -10,10 +10,14 @@ const data = {
     overview: '',
     problem: 'Despite the feeling of connection music can provide, current services such as Ticketmaster, Apple Music, and Spotify provide no singular place where you can find access to all of these services in one joint experience. Each service only handles one aspect of the overall music experience which can encompass a plethora of applications across different platforms. This leaves us with a disconnected experience— the question becomes how can we combine the music experience to encourage further connection between fans, artists, and venue?',
     process: {
-        1: 'We dove into this project knowing that a specialized focus on the user experience was a necessity. We started by defining our core users and audience. We provided surveys that asked questions regarding music listening habits, frequency of concert attendance, and how people connect through music currently. We also talked to active memebers in the local music community to guage their reception of the idea, give us feedback, and point towards defining our target audience. We analyzed this reasearch and created user personas which consolidated the data and gave us a tangible reference point of the different kinds of users we were designing for. At this point, we continued research, reaching back into the pool of potential users we had already accumulated. We had them participate in various other exercises such as card sorting, focus groups, and affinity mapping with the goal of proposing features and defining what users actually wanted out of this experience. Based on the results of these exercises, we analyzed our data and created low-fidelity wireframes. We took these wireframes and began usibility testing while developing a style system. Eventually, we took the developments from both of these processes and created high-fidelity wireframes which included font choices, colors, and UI elements. With a design system in place, we were able to create a style guide which made making alterations and additional screens much easier to do while maintaining the brand that we had developed up to this point. These high fidelity wireframes were turned into a clickable-prototype which was used to do more extensive testing on the app as development started. We decided to start with a web application as proof of concept of the idea. We used Google Maps API, a PHP database, and Angular.js. As design and development progressed, we maintained an agile work process, reiterating upon our designs with new feedback from users each week.',
-        2: 'After a proof of concept created, Souvinear moved into native development starting November 2018. We used Apple’s flagship iOS development platform, Xcode & Swift, to write the app. Over the course of the next 6 months, we spent countless hours planning out and building the application using technologies such as Google Maps API, Spotify API, and Firebase. Spotify’s API provided a large library of music for users to pin and swap, while Google Maps API provided a base map for users to update in realtime with hotspots of the events happening around them. Firebase was used to maintain user’s data securely. While heavy development was was underway, we never stopped our original process of reaching out to users, getting feedback, testing or product, and tweaking the direction we were heading. '},
+        1: 'We dove into this project knowing that a specialized focus on the user experience was a necessity. We started by defining our core users and audience. We provided surveys that asked questions regarding music listening habits, frequency of concert attendance, and how people connect through music currently. We also talked to active memebers in the local music community to guage their reception of the idea, give us feedback, and point towards defining our target audience. We analyzed this reasearch and created user personas which consolidated the data and gave us a tangible reference point of the different kinds of users we were designing for.', 
+        2: 'At this point, we continued research, reaching back into the pool of potential users we had already accumulated. We had them participate in various other exercises such as card sorting, focus groups, and affinity mapping with the goal of proposing features and defining what users actually wanted out of this experience. Based on the results of these exercises, we analyzed our data and created low-fidelity wireframes.', 
+        3: 'We began usibility testing with these low-fidelity versions of the app while developing a style system in tandem. Eventually, we took the developments from both of these processes and created mid-fidelity digital "grey-box" mockups and then eventually high-fidelity wireframes which included font choices, colors, and UI elements.', 
+        4:'With a design system in place, we were able to create a style guide which made making alterations and additional screens much easier to do while maintaining the brand that we had developed up to this point.', 5:'These high fidelity wireframes were turned into a clickable-prototype which was used to do more extensive testing on the app as development started.', 
+        6:'We decided to start with a web application as proof of concept of the idea. We used Google Maps API, a PHP database, and Angular.js. As design and development progressed, we maintained an agile work process, reiterating upon our designs with new feedback from users each week.',
+        7: 'After a proof of concept created, Souvinear moved into native development starting November 2018. We used Apple’s flagship iOS development platform, Xcode & Swift, to write the app. Over the course of the next 6 months, we spent countless hours planning out and building the application using technologies such as Google Maps API, Spotify API, and Firebase. Spotify’s API provided a large library of music for users to pin and swap, while Google Maps API provided a base map for users to update in realtime with hotspots of the events happening around them. Firebase was used to maintain user’s data securely. While heavy development was was underway, we never stopped our original process of reaching out to users, getting feedback, testing or product, and tweaking the direction we were heading. '},
     solution: 'After almost two years of hard work and dedication, we currently have a successful Alpha application, running through Apple’s TestFlight. Souvinear requires an iPhone and Spotify account to download. To celebrate this milestone, we hosted a launch event in the lobby of Westphal College of Media Arts and Design. The event was very successful, with over 100 people in attendance, 70 app downloads, and 50 swapped songs. We had 5 local Philly acts play live music, 2 of them from our very own team. It was an amazing night of celebration and excitement for the launch of our app. Hearing all of the positive feedback mades us very excited for the future of this project.',
-    awards: 'Throughout this process we have been lucky enough to have been awarded several awards for our work:'
+    awards: 'Throughout this process we have been lucky enough to have been work several awards for our work listed here:'
 };
 
 class Souvinear extends React.Component {
@@ -67,12 +71,21 @@ class Souvinear extends React.Component {
                         </div>
                         <div className="process">
                             <h2>The Process</h2>
-                            {process[1]}
-                            {process[2]}
-
+                            <p>{process[1]}</p>
+                            <video loop muted autoPlay width="100%" height="600" name="surveying" src="./img/surveys.mov"></video>
+                            <p>{process[2]}</p>
+                            <img width="100%" src="./img/lowfid.png" alt="low fidelity wireframes" ></img>
+                            <p>{process[3]}</p>
+                            <p>{process[4]}</p>
+                            <video loop muted autoPlay src="./img/styleguide.mp4" alt="style guide" ></video>
+                            <p>{process[5]}</p>
+                            <img className="highfid" src="./img/prototype.gif" alt="prototype" ></img>
+                            <p>{process[6]}</p>
+                            <p>{process[7]}</p>
+                            <video loop muted autoPlay width="100%" height="600" name="surveying" src="./img/usertesting.mp4"></video>
                         </div>
                         <div className="solution">
-                            <h2>Our Solution</h2>
+                            <h2>The Solution</h2>
                             {solution}
                         </div>
                         <div className="beyond">
@@ -98,7 +111,7 @@ const CaseStyles = styled.div`
 }
 
 .container{ 
-    width: 75%;
+    width: 70%;
     margin: 0px auto;
 }
 .caseheader{
@@ -166,6 +179,24 @@ iframe{
     h2{
         letter-spacing: 0.1em;
         margin-top: 45px;
+    }
+    img{
+        margin: 25px auto;
+        width: 100%;
+    }
+    img.highfid{
+        width: 300px;
+        margin: 25px auto;
+        border-radius: 45px;
+        -webkit-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
+        -moz-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
+        box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
+    }
+    .process{
+        width: 100%;
+        display: flex;
+        column-count: 1;
+        flex-direction: column;
     }
 }
 
