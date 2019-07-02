@@ -25,7 +25,7 @@ class ExpListItem extends Component {
     if (index == lastItem) {
     
       content = <div className="content-buttons">
-                    <Link to='/more'><ButtonStyle color={sectionsColor} type="button">View More Work ❯❯</ButtonStyle></Link>
+                    <Link to='/more'><ButtonStyle color={sectionsColor} type="button">A Work In Progress</ButtonStyle></Link>
                 </div>
     } else {
       content = <><div className="content-text-sec role">
@@ -149,7 +149,6 @@ h2{
       padding: 3px 0px 0px 45px;
       width: 130px;
       text-shadow: 0px 0px 5px #0000005e;
-
   }
  p{
     color: white;
@@ -250,6 +249,19 @@ h2{
     }
     button{
         width: 90%;
+        height: 48px;
+    }
+  }
+  @media (max-width: 26em) {
+    .content-text{
+        bottom: 120px;
+    }
+    h1, .entry2 h1{
+        font-size: 3.6rem;
+        transition: all 0.3s ease-in-out;
+    }
+    button{
+        width: 85%;
         height: 48px;
     }
   }

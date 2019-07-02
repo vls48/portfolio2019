@@ -33,10 +33,12 @@ class About extends React.Component {
             let title = jobTitles[this.state.jobTitleIdx % jobTitles.length];
             return (
             <AboutStyle baseColor={baseColor} accentColor={accentColor}>
+                <div className="name">
                 <H1 color={baseColor} size="3.8rem;" content="VICTORIA STEWART"></H1>
                 <span> design / code / user experience</span>
-                <p>hi, I'm a Philadelphia-based <span className="changingText">{title}</span> with a passion for creating experiences- from    <span className="inlineText"><img src="./img/design.png" alt="design icon" height="25"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;concept</span>  to <span className="inlineText">&lt;&#47; code &gt; </span></p>
-                <p className="knowledge">my knowledge includes</p>
+                </div>
+                <p>hi, I'm a Philadelphia-based <span className="changingText">{title}</span> with a passion for creating experiences- from    <span className="inlineText"><img src="./img/design.png" alt="design icon" height="25"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;concept</span>  to <span className="inlineText">&lt;&#47;&nbsp;code&nbsp;&gt; </span></p>
+                
                 <div>
                     <ul>{skills.map((item, index) => (
                     <li key={index}>{item}</li>
@@ -47,10 +49,11 @@ class About extends React.Component {
                     <li key={index}>{item}</li>
                     ))}</ul>
                 </div>
-                <p className="knowledge learning">&amp; I'm always learning</p>
+                <p className="knowledge learning">^ what I'm good at<br/> I'm always pushing to gain a deeper understanding in these areas &amp; explore brand new ones</p>
+    
                 <Underline buttoncolor={accentColor} color={"#7474742b"} height="1px" width="90%"></Underline>      
                 <div className="button-cont">
-                    <h2>I'd love to get in contact, find me here:</h2>
+                    <h2>Say hi! Contact me here:</h2>
                     <a href="mailto:toristewart08@gmail.com" target="_top">
                         <ButtonStyle buttoncolor={accentColor} color={accentColor} type="button" onClick="{this.handleClick}">email ❯❯</ButtonStyle>
                     </a>
@@ -103,7 +106,7 @@ const AboutStyle = styled.div`
         border-radius: 10px;
     }
     p{
-        margin: 75px auto 45px auto;
+        margin: 75px auto 75px auto;
         font-weight: 300;
         font-size: 1.7rem;
         line-height: 53px;
@@ -168,5 +171,43 @@ const AboutStyle = styled.div`
         font-weight: 300;
         margin: 6px auto 45px auto;
         line-height: 15px;
+    }
+
+    @media (max-width: 84em) {
+        padding: 0px 35px 25px 35px;
+        p{
+            width: 85%;
+        }
+        .name{
+            margin-top: 45px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        h1, span{
+            width: 100%;
+            text-align: center;
+            padding-lefT: 0px;
+        }
+        }
+        ul{
+            padding-left: 0px;
+        } 
+        .button-cont{
+            padding-right: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        h2, button{
+            padding-right: 0px;
+            margin-right: 0px;
+        }
+        button{
+            width: 220px;
+        }
+        img{
+            margin: 15px;
+        }
+        }  
     }
 `;

@@ -32,6 +32,9 @@ class Experience extends React.Component {
     const fullpages = { ...this.state.fullpages };
     if (direction === "down"){
         console.log("scrolled down");
+        if (fullpages[dkey].opacity === '0'){
+          fullpages[dkey].opacity = '1';
+        }
         fullpages[okey].opacity = '0';
         console.log(fullpages)
         //this.setState( {fullpages} );
@@ -127,6 +130,9 @@ const ExperienceStyle = styled.div`
     -webkit-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
     -moz-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
     box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
+  }
+  @media (max-width: 26em) {
+    padding: 0px 15px;
   }
 `;
 
