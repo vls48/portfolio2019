@@ -78,8 +78,8 @@ const ContentStyle = styled.div`
        -webkit-text-stroke-color: #168DCA; 
     }
     .content-text h2, p, h3{
-        color: #313131;
-        text-shadow: 0px 0px 4px #00000014;
+        color: #191919;
+        text-shadow: 0px 0px 3px #00000014;
     }
     .content-text p, h3{
         opacity: 0.8;
@@ -119,11 +119,12 @@ const ContentStyle = styled.div`
 }
 
 .content-text-sec{
-    margin: 5px 15px 0px 0px;
+    margin: 5px 0px 0px 0px;
 }
 
 .role{
     padding-top: 20px;
+    display: flex;
 }
 .content-buttons{
     padding-left: 45px;
@@ -171,6 +172,9 @@ h2{
         background-color: rgba(0,0,0,0.65);
         transition: all 0.3s ease-in;
     }
+    .role{
+        display: initial;
+    }
   }
   @media (max-width: 64em) {
     .content-box{
@@ -183,7 +187,7 @@ h2{
         transition: all 0.3s ease-in;
     }
     .content-text-sec{
-        margin: 10px 15px;
+        margin: 10px 0px 10px 15px;
     }
     h2{
         width: 100%;
@@ -263,6 +267,7 @@ h2{
     button{
         width: 85%;
         height: 48px;
+        transition: 0.3s all ease-in;
     }
   }
 `;

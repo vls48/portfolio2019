@@ -88,6 +88,13 @@ const HeaderStyle = styled.header`
     border-style: solid;
     border-color: transparent black transparent transparent;
   }
+
+  @media (max-width: 26em) {
+    
+    .tooltip .tooltiptext {
+      width: 135px;
+      transition: 0.3s all ease-in;
+    }
 `;
 
 

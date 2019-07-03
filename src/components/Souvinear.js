@@ -123,7 +123,7 @@ class Souvinear extends React.Component {
 export default Souvinear;
 
 const CaseStyles = styled.div`
-
+transition: 0.3s all ease-in;
 .bg{
     background-image: url('./img/svnr-bg.png');
     background-size: cover;
@@ -186,7 +186,7 @@ iframe{
     padding: 25px;
     .halfcont{
         width: 50%;
-        display: inline-block;
+        display: table-cell;
         text-align: center;
     p{
         width: 80%;

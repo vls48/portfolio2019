@@ -23,6 +23,16 @@ class Experience extends React.Component {
     };
   }
 
+  componentWillMount(){
+    const fullpages = { ...this.state.fullpages };
+    if (fullpages[0].opacity === "0"){
+      fullpages[0].opacity = '1';
+  }
+
+  }
+  componentWillUnmount(){
+    console.log('unmount');
+  }
   onLeave(origin, destination, direction) {
     console.log('onLeave', { origin, destination, direction });
     // arguments are mapped in order of fullpage.js callback arguments do something
@@ -35,6 +45,7 @@ class Experience extends React.Component {
         if (fullpages[dkey].opacity === '0'){
           fullpages[dkey].opacity = '1';
         }
+
         fullpages[okey].opacity = '0';
         console.log(fullpages)
         //this.setState( {fullpages} );

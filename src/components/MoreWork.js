@@ -1,73 +1,35 @@
 import React from 'react';
-import H1 from './styles/H1';
 import Underline from './styles/Underline';
 import styled from 'styled-components';
-import ButtonStyle from './styles/ButtonStyle';
+
 
 const accentColor='#21B89A';
 const baseColor='#747474';
-const jobTitles = ['visual designer', 'developer', 'ux designer', 'creative'];
-const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Git', 'Wireframing', 'Design Systems', 'Usability Testing', 'Swift']
-const tools = ['Sketch', 'Invision', 'Figma', 'Adobe Creative Suite', 'Xcode']
 
-class About extends React.Component {
+class Work extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        jobTitleIdx: 0
       };
     }
 
-    componentDidMount() {
-        this.timeout = setInterval(() => {
-          let currentIdx = this.state.jobTitleIdx;
-          this.setState({ jobTitleIdx: currentIdx + 1 });
-        }, 1500);
-      }
-
-    componentWillUnmount() {
-        clearInterval(this.timeout);
-      }
-
         render() {
-            let title = jobTitles[this.state.jobTitleIdx % jobTitles.length];
+            
             return (
             <AboutStyle baseColor={baseColor} accentColor={accentColor}>
-                <div className="name">
-                <H1 color={baseColor} size="3.8rem;" content="VICTORIA STEWART"></H1>
-                <span> design / code / user experience</span>
-                </div>
-                <p>hi, I'm a Philadelphia-based <span className="changingText">{title}</span> with a passion for creating experiences- from    <span className="inlineText"><img src="./img/design.png" alt="design icon" height="25"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;concept</span>  to <span className="inlineText">&lt;&#47;&nbsp;code&nbsp;&gt; </span></p>
+
+                <p>this page is under construction</p>
                 
-                <div>
-                    <ul>{skills.map((item, index) => (
-                    <li key={index}>{item}</li>
-                    ))}</ul>
-                </div>
-                <div>
-                    <ul>{tools.map((item, index) => (
-                    <li key={index}>{item}</li>
-                    ))}</ul>
-                </div>
-                <p className="knowledge learning">^ what I'm good at ^<br/>but I'm always striving to gain a deeper understanding in these areas &amp; explore brand new ones</p>
+                <p className="knowledge learning">coming soon</p>
     
                 <Underline buttoncolor={accentColor} color={"#7474742b"} height="1px" width="90%"></Underline>      
-                <div className="button-cont">
-                    <h2>Say hi! Contact me here:</h2>
-                    <a href="mailto:toristewart08@gmail.com" target="_top">
-                        <ButtonStyle buttoncolor={accentColor} color={accentColor} type="button" >email ❯❯</ButtonStyle>
-                    </a>
-                    <a href="https://www.linkedin.com/in/victoria-stewart-152399109/">
-                        <img src="./img/linkedin.png" alt="linkedin logo" height="36px"></img>
-                    </a>
-                </div>
 
             </AboutStyle>
         );
     }
 }
 
-export default About;
+export default Work;
 
 const AboutStyle = styled.div`
     padding: 0px 25px 25px 25px;

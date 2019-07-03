@@ -5,6 +5,7 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Souvinear from './components/Souvinear';
 import IBX from './components/IBX';
+import Work from './components/MoreWork';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/experience" component={Experience} />
         <Route path="/experience#" component={Experience} /> 
         <Route path="/souvinear" component={Souvinear}/> 
+        <Route path="/more" component={Work}/> 
         <Route path="/ibx" component={IBX} />    
       </Switch>
     </div>
