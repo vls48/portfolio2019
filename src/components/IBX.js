@@ -55,7 +55,7 @@ class IBX extends React.Component {
                             <div className="halfcont myrole">
                             <h2>My Role</h2>
                             <p>
-                            User Experience Reasearch / Wireframing / High Fidelity Mockups / Protoyping /Client Presentation</p></div>
+                            User Experience Reasearch / Wireframing / High Fidelity Mockups / Protoyping / Client Presentation</p></div>
                             <div className="halfcont mytools">
                                 <h2>My Tools</h2>
                                 <p>

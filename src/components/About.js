@@ -49,7 +49,7 @@ class About extends React.Component {
                     <li key={index}>{item}</li>
                     ))}</ul>
                 </div>
-                <p className="knowledge learning">^ what I'm good at ^<br/>but I'm always striving to gain a deeper understanding in these areas &amp; explore brand new ones</p>
+                <p className="knowledge learning">^ what I'm good at <br/>but I'm always striving to learn more</p>
     
                 <Underline buttoncolor={accentColor} color={"#7474742b"} height="1px" width="90%"></Underline>      
                 <div className="button-cont">

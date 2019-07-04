@@ -29,7 +29,7 @@ const listdata = [{
     {   
         id: '1',
         text: 'IBX',
-        desc: 'Desktop and mobile solutions for Philadelphia`s largest health insurer, Indenpendence Blue Cross. Designs were created for IBX`s member portal serving 7 million people nationwide.',
+        desc: 'Desktop and mobile solutions for Philadelphia`s largest health insurer, Independence Blue Cross. Designs were created for IBX`s member portal serving 7 million people nationwide.',
         mywork: 'user-experience-reasearch / wireframing / high-fidelity-mockups / client-presentation',
         tech: 'Figma',
         img: './img/ibx-final.png',
@@ -75,7 +75,7 @@ const listdata = [{
         accentColor: '#D41E29',
         demo: {
             exists: true,
-            link: '/obey'
+            link: 'https://vls48.github.io/idm364-vls48/#/'
         },
         casestudy: {
             exists: false,
@@ -93,7 +93,7 @@ const listdata = [{
         accentColor: '#012f3973',
         demo: {
             exists: true,
-            link: '/bitepick'
+            link: 'https://vls48.github.io/bitepick/'
         },
         casestudy: {
             exists: false,
