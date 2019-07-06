@@ -3,6 +3,7 @@ import H1 from './styles/H1';
 import Underline from './styles/Underline';
 import styled from 'styled-components';
 import ButtonStyle from './styles/ButtonStyle';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const accentColor='#21B89A';
 const baseColor='#747474';
@@ -14,7 +15,8 @@ class About extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        jobTitleIdx: 0
+        jobTitleIdx: 0,
+        fade: false
       };
     }
 
@@ -22,22 +24,26 @@ class About extends React.Component {
         this.timeout = setInterval(() => {
           let currentIdx = this.state.jobTitleIdx;
           this.setState({ jobTitleIdx: currentIdx + 1 });
-        }, 1500);
+        }, 3000);
+        this.fadetimeout = setInterval(() => {
+            this.setState({ fade: !this.state.fade });
+          }, 1500);
+
       }
 
     componentWillUnmount() {
         clearInterval(this.timeout);
+        clearInterval(this.fadetimeout);
       }
 
         render() {
             let title = jobTitles[this.state.jobTitleIdx % jobTitles.length];
+            let fadeClass = this.state.fade ? 'fade-in' : 'fade-out';
             return (
             <AboutStyle baseColor={baseColor} accentColor={accentColor}>
-                <div className="name">
-                <H1 color={baseColor} size="3.8rem;" content="VICTORIA STEWART"></H1>
-                <span> design / code / user experience</span>
-                </div>
-                <p>hi, I'm a Philadelphia-based <span className="changingText">{title}</span> with a passion for creating experiences- from    <span className="inlineText"><img src="./img/design.png" alt="design icon" height="25"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;concept</span>  to <span className="inlineText">&lt;&#47;&nbsp;code&nbsp;&gt; </span></p>
+                <p>hi, I'm a Philadelphia-based 
+                        <span className="changingText"> <span className={`change ${fadeClass}`}>{title}</span></span> 
+                    with a passion for creating experiences- from    <span className="inlineText"><img src="./img/design.png" alt="design icon" height="25"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;concept</span>  to <span className="inlineText">&lt;&#47;&nbsp;code&nbsp;&gt; </span></p>
                 
                 <div>
                     <ul>{skills.map((item, index) => (
@@ -70,7 +76,18 @@ class About extends React.Component {
 export default About;
 
 const AboutStyle = styled.div`
-    padding: 0px 25px 25px 25px;
+
+  .fade-out {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+  }
+  .fade-in {
+    opacity: 0;
+    transition: opacity 500ms 1000ms ease-in-out;
+  }
+
+
+    padding: 135px 25px 25px 25px;
     font-family: Roboto;
     transition: 0.3s all ease-in-out;
     h1{
@@ -82,8 +99,8 @@ const AboutStyle = styled.div`
         color: ${(props) => props.accentColor || 'black'};
         font-weight: 700;
         letter-spacing: 0.045em;
-        font-size: 1.1rem;
-        padding: 0px 0px 15px 30px;
+        font-size: 1.4rem;
+        margin: 0px 5px;
     }
     span.inlineText {
         color: ${(props) => props.baseColor || 'black'};
@@ -105,11 +122,6 @@ const AboutStyle = styled.div`
         background-color: #9595951f;
         padding: 0;
         border-radius: 10px;
-        opacity: 1;
-        .changing{
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
     }
     p{
         margin: 75px auto 75px auto;
@@ -181,7 +193,7 @@ const AboutStyle = styled.div`
 
     @media (max-width: 84em) {
         transition: 0.3s all ease-in-out;
-        padding: 0px 35px 25px 35px;
+        padding: 50px 35px 25px 35px;
         p{
             width: 85%;
         }

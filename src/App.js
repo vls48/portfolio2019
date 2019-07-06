@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import styled from "styled-components";
 import About from './components/About';
 import Experience from './components/Experience';
@@ -8,14 +8,12 @@ import Souvinear from './components/Souvinear';
 import IBX from './components/IBX';
 import Work from './components/MoreWork';
 import { AnimatedSwitch } from 'react-router-transition';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import './App.css';
-
 
 function App({ location }) {
   return (
     <div className="App">
-    <Header/>
+    <Header location={location === '/' ? "true" : "false"}/>
     <Wrapper>
           <AnimatedSwitch 
             atEnter={{ offset: 100 }}
@@ -26,18 +24,24 @@ function App({ location }) {
             })}
             className="switch-wrapper"
           >
-            <Route path="/" exact component={About} />
-            <Route path="/about" component={About} />
-            <Route path="/experience" component={Experience} />
-            <Route path="/experience#" component={Experience} /> 
-            <Route path="/souvinear" component={Souvinear}/> 
-            <Route path="/more" component={Work}/> 
-            <Route path="/ibx" component={IBX} />    
+            <Route path="/" exact component={AboutComponent} />
+            <Route path="/about" component={AboutComponent} />
+            <Route path="/experience" component={ExperienceComponent} />
+            <Route path="/experience#" component={ExperienceComponent} /> 
+            <Route path="/souvinear" component={SouvinearComponent}/> 
+            <Route path="/more" component={WorkComponent}/> 
+            <Route path="/ibx" component={IBXComponent} />    
           </AnimatedSwitch>
       </Wrapper>
     </div>
   );
 }
+
+const AboutComponent = withRouter(props => <About {...props}/>);
+const ExperienceComponent = withRouter(props => <Experience {...props}/>);
+const SouvinearComponent = withRouter(props => <Souvinear {...props}/>);
+const IBXComponent = withRouter(props => <IBX {...props}/>);
+const WorkComponent = withRouter(props => <Work {...props}/>);
 
 const Wrapper = styled.div`
 

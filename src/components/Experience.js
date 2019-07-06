@@ -6,7 +6,7 @@ import listdata from '../js/listdata.js';
 
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
-const originalColors = ['#7653C1', '#168DCA', '#D41E29', '#5AC3DA', '#F7F8F9'];
+const originalColors = ['#7653C1', '#168DCA', '#D41E29', '#5AC3DA', '#E3E4E5'];
 
 const pluginWrapper = () => {
     /**
