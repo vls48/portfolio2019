@@ -27,8 +27,7 @@ class Experience extends React.Component {
     const fullpages = { ...this.state.fullpages };
     if (fullpages[0].opacity === "0"){
       fullpages[0].opacity = '1';
-  }
-
+    }
   }
   componentWillUnmount(){
     console.log('unmount');

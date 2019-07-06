@@ -7,8 +7,8 @@ import ButtonStyle from './styles/ButtonStyle';
 const accentColor='#21B89A';
 const baseColor='#747474';
 const jobTitles = ['visual designer', 'developer', 'ux designer', 'creative'];
-const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Git', 'Wireframing', 'Design Systems', 'Usability Testing', 'Swift']
-const tools = ['Sketch', 'Invision', 'Figma', 'Adobe Creative Suite', 'Xcode']
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Git', 'Wireframing', 'Design Systems', 'Usability Testing', 'Swift'];
+const tools = ['Sketch', 'Invision', 'Figma', 'Adobe Creative Suite', 'Xcode'];
 
 class About extends React.Component {
     constructor(props) {
@@ -105,6 +105,11 @@ const AboutStyle = styled.div`
         background-color: #9595951f;
         padding: 0;
         border-radius: 10px;
+        opacity: 1;
+        .changing{
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+        }
     }
     p{
         margin: 75px auto 75px auto;
@@ -131,7 +136,7 @@ const AboutStyle = styled.div`
     }
     h2{
         color: ${(props) => props.baseColor || 'black'};
-        font-size: 1.3rem;
+        font-size: 1rem;
         text-align: center;
         font-weight: 500;
         padding-right: 25px;
