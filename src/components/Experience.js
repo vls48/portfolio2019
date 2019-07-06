@@ -112,10 +112,7 @@ const ExperienceStyle = styled.div`
 
   margin: auto;
   padding: 0px 65px;
-
-  .fullpage-wrapper{
-      pointer-events: none;
-  }
+  position: relative;
 
   .wapper{
       margin: 15px;

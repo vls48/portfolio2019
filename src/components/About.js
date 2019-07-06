@@ -72,7 +72,7 @@ export default About;
 const AboutStyle = styled.div`
     padding: 0px 25px 25px 25px;
     font-family: Roboto;
-    transition: 0.3s all ease-in;
+    transition: 0.3s all ease-in-out;
     h1{
         padding: 0px 0px 0px 25px;
         line-height: 3.7rem;
@@ -108,7 +108,7 @@ const AboutStyle = styled.div`
         opacity: 1;
         .changing{
             opacity: 0;
-            transition: opacity 0.3s ease-in;
+            transition: opacity 0.3s ease-in-out;
         }
     }
     p{
@@ -162,7 +162,7 @@ const AboutStyle = styled.div`
 
     a img:hover{
         opacity: 0.6;
-        transition: 0.3s all ease-in;
+        transition: 0.3s all ease-in-out;
     }
     .knowledge{
         color: ${(props) => props.baseColor || 'black'};
@@ -180,7 +180,7 @@ const AboutStyle = styled.div`
     }
 
     @media (max-width: 84em) {
-        transition: 0.3s all ease-in;
+        transition: 0.3s all ease-in-out;
         padding: 0px 35px 25px 35px;
         p{
             width: 85%;

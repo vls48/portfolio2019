@@ -11,8 +11,7 @@ class ExpListItem extends Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
-
-
+  
   handleClick = (event) => {
       console.log(event.currentTarget.value);
   }

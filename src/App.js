@@ -11,15 +11,19 @@ import { AnimatedSwitch } from 'react-router-transition';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import './App.css';
 
+
 function App({ location }) {
   return (
     <div className="App">
     <Header/>
     <Wrapper>
           <AnimatedSwitch 
-            atEnter={{ opacity: 0 }}
-            atLeave={{ opacity: 0 }}
-            atActive={{ opacity: 1 }}
+            atEnter={{ offset: 100 }}
+            atLeave={{ offset: 100 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+              transform: `translateX(${styles.offset}%)`,
+            })}
             className="switch-wrapper"
           >
             <Route path="/" exact component={About} />

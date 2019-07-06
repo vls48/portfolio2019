@@ -16,7 +16,8 @@ const Header = () => (
 const HeaderStyle = styled.header`
   width: 100%;
   overflow: auto;
-  postion: absolute;
+  position: relative;
+  z-index: 2;
   h1{
     display: inline-block;
     float: right;
