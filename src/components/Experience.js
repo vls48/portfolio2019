@@ -138,8 +138,12 @@ const ExperienceStyle = styled.div`
     -moz-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
     box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
   }
+
+  @media (max-width: 38em) {
+    padding: 45px 65px;
+  }
   @media (max-width: 26em) {
-    padding: 0px 15px;
+    padding: 15px 15px;
   }
 `;
 

@@ -177,7 +177,7 @@ h2{
   }
   @media (max-width: 64em) {
     .content-box{
-        background-color: rgba(0,0,0,0.80);
+        background-color: rgba(0,0,0,0.70);
         transition: all 0.3s ease-in;
     }
     .content-text{
@@ -242,9 +242,9 @@ h2{
         transition: all 0.3s ease-in-out;
     }
   }
-  @media (max-width: 36em) {
+  @media (max-width: 38em) {
     .content-text{
-        bottom: 120px;
+        bottom: 160px;
     }
     h1{
         font-size: 4rem;

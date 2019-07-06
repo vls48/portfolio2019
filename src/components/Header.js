@@ -9,7 +9,7 @@ const baseColor='#747474';
 
 class Header extends React.Component {
   render(){
-  const { location, history } = this.props;
+  const { location } = this.props;
   return(
       <HeaderStyle path={location.pathname} accentColor={accentColor} baseColor={baseColor}>
         <div className="left">
@@ -23,8 +23,10 @@ class Header extends React.Component {
         </div>
         </div>
 
+        <div className="right">
           <Link to="/experience"><h2>Experience</h2> </Link> 
           <Link to="/about"><h2>About</h2> </Link>   
+        </div>
     
       </HeaderStyle>
   );
@@ -42,6 +44,7 @@ const HeaderStyle = styled.header`
   .left{
     display: inline-flex;
   }
+  .right{ display: initial;}
   .name{
      position: absolute;
       max-width: ${(props) => props.path === "/about" ? 'min-content' : '340px'};
@@ -53,6 +56,7 @@ const HeaderStyle = styled.header`
         word-spacing: 5px;
         line-height: 2.2rem;
         color: ${(props) => props.path === "/about" ? props.accentColor : 'white'};
+        display: ${(props) => props.path === "/about" ? 'initial' : 'none'};
         font-weight: 700;
         letter-spacing: 0.045em;
         width: max-content;
@@ -131,13 +135,47 @@ const HeaderStyle = styled.header`
   .tooltip:hover .tooltiptext {
     opacity: 1;
   }
-  
-  @media (max-width: 26em) {
-    
-    .tooltip .tooltiptext {
-      width: 135px;
-      transition: 0.3s all ease-in;
+
+  @media (max-width: 44em) {
+    .tooltip:hover ~ .name {
+      top: 60px;
+      left: 45px
     }
+  }
+  @media (max-width: 38em) {
+    overflow: initial;
+    display: table;
+    .name{
+      display: ${(props) => props.path === "/about" ? '' : 'none'};
+      top: 75px;
+      position: initial;
+      margin: 0px auto;
+      padding-top: 45px;
+      span{
+        padding: 0px 0px 0px 0px;
+        width: 100%;
+        margin: auto;
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .left{
+      margin: 55px auto;
+      display: table-footer-group;
+    }
+    .right{
+      display: table-header-group;
+    }
+    h1{
+      padding: 0px;
+
+    }
+    .tooltip{
+      display: none;
+    }
+  }
+
 `;
 
 

@@ -86,7 +86,6 @@ const AboutStyle = styled.div`
     transition: opacity 500ms 1000ms ease-in-out;
   }
 
-
     padding: 135px 25px 25px 25px;
     font-family: Roboto;
     transition: 0.3s all ease-in-out;
@@ -189,6 +188,10 @@ const AboutStyle = styled.div`
         font-weight: 300;
         margin: 6px auto 45px auto;
         line-height: 15px;
+    }
+    @media (max-width: 38em) {
+        p{
+            margin: 15px auto 75px auto; 
     }
 
     @media (max-width: 84em) {
