@@ -75,7 +75,7 @@ const HeaderStyle = styled.header`
   h2{
     display: inline-block;
     float: right;
-    padding: 25px;
+    padding: 25px 25px 15px 25px;
     font-size: 1.1rem;
     margin: 0px;
     font-weight: 500;
@@ -146,16 +146,17 @@ const HeaderStyle = styled.header`
     overflow: initial;
     display: table;
     .name{
-      display: ${(props) => props.path === "/about" ? '' : 'none'};
+      opacity: ${(props) => props.path === "/about" ? '1' : '1'};
       top: 75px;
       position: initial;
       margin: 0px auto;
-      padding-top: 45px;
+      padding-top: ${(props) => props.path === "/about" ? '45px' : '0px'};
+      text-align: center;
       span{
         padding: 0px 0px 0px 0px;
         width: 100%;
         margin: auto;
-        display: block;
+        display: ${(props) => props.path === "/about" ? 'block' : 'none'};
         text-align: center;
       }
     }
@@ -172,6 +173,7 @@ const HeaderStyle = styled.header`
 
     }
     .tooltip{
+      opacity: 0;
       display: none;
     }
   }

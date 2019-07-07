@@ -7,7 +7,7 @@ const data = {
     desc: 'Independence is the largest health insurer in the Philadelphia area, serving more than two million people in the region and seven million nationwide.' ,
     headerimg: './img/ibx-head.jpg',
     timeframe: 'April 2018 - September 2018',
-    overview: 'In April 2018, I was hired full-time for a 6 month long co-op where I was a member of the IBX user experience team. In this time frame, I reimagined existing digital services for IBX members across platforms, as well as pioneered new products. Each project went through user-focused design method that included initial research, wireframing, usability testing in an iterative process, into eventual high-fidelity wireframes that maintained the companys branding. They were then presented to the business for approval and development.',
+    overview: 'In April 2018, I was hired full-time for a 6 month long co-op where I was a member of the IBX user experience team. In this time frame, I reimagined existing digital services for IBX members across platforms, as well as pioneered new products. Each project went through user-focused design method that included initial research, wireframing, usability testing in an iterative process, into eventual high-fidelity wireframes that maintained the company\'s branding. They were then presented to the business for approval and development.',
     problem: 'coming soon',
     process: {
         1: 'coming soon', 
@@ -55,7 +55,7 @@ class IBX extends React.Component {
                             <div className="halfcont myrole">
                             <h2>My Role</h2>
                             <p>
-                            User Experience Reasearch / Wireframing / High Fidelity Mockups / Protoyping / Client Presentation</p></div>
+                            User-Experience-Reasearch / Wireframing / High-Fidelity-Mockups / Protoyping / Client-Presentation</p></div>
                             <div className="halfcont mytools">
                                 <h2>My Tools</h2>
                                 <p>
@@ -72,22 +72,40 @@ class IBX extends React.Component {
                         </div>
                         <div className="process">
                             <h2>Independence Blue Cross Memeber Homepage Redesign</h2>
-                            <p>{problem}</p>
-                            <video className="highfid" loop muted autoPlay src="" alt="find hotspot demo" ></video>
-                            <h3> </h3>
+                            
+                            <div className="headerimage">
+                            <iframe title={title} frameborder="0" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FWBInPIPlJ9P7n4zTK4D6PR0V%2Fhomepage%3Fnode-id%3D7%253A0" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div className="headerimage"><iframe title={title} frameborder="0"src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FWBInPIPlJ9P7n4zTK4D6PR0V%2Fhomepage%3Fnode-id%3D7%253A1" allowfullscreen></iframe></div>
+                        </div>
+                        <div className="process">
+                            <h2>Benefits Usage</h2>
+                            <p>desktop</p>
+                            <div className="headerimage">
+                            <iframe title={title} frameborder="0" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FCJ2hEhHEsabW9RJFHSfT4pd8%2FbenefitUsage%3Fnode-id%3D5%253A373" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div className="headerimage"><iframe title={title} frameborder="0" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FCJ2hEhHEsabW9RJFHSfT4pd8%2FbenefitUsage%3Fnode-id%3D5%253A374" allowfullscreen></iframe></div>
+                            <div className="headerimage"><iframe title={title} frameborder="0" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FCJ2hEhHEsabW9RJFHSfT4pd8%2FbenefitUsage%3Fnode-id%3D5%253A372"
+                            allowfullscreen></iframe></div>
+
+                            <p>mobile</p>
+                            <div className="headerimage">
+                            <iframe title={title} frameborder="0" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FCJ2hEhHEsabW9RJFHSfT4pd8%2FbenefitUsage%3Fnode-id%3D5%253A376" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div className="headerimage"><iframe title={title} frameborder="0" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FCJ2hEhHEsabW9RJFHSfT4pd8%2FbenefitUsage%3Fnode-id%3D5%253A377" allowfullscreen></iframe></div>
+                            
                         </div>
                         <div className="process">
                             <h2>'Find a Doctor' Flow Redesign</h2>
-                            <p>{process[1]}</p>
-                            <video className="highfid" loop muted autoPlay src="" alt="find hotspot demo" ></video>
-                            <h3> </h3>
+                            <div className="headerimage"><iframe title={title} frameborder="0" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmZVywIT675SztL35tUpFLc%2FProv-Info-Change-PCP-V2%3Fscaling%3Dscale-down-width%26node-id%3D50%253A241"  allowfullscreen></iframe></div>
                         
                         </div>
                         <div className="process">
                             <h2>Broker Bonus Dashboard</h2>
-                            <p>{process[1]}</p>
-                            <video className="highfid" loop muted autoPlay src="" alt="pin a song demo" ></video> 
-                            <h3> </h3>
+                            <div className="headerimage"><iframe title={title} frameborder="0" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F0UT9Wo2afp4hfegDwJeyu2uH%2FbrokerBonus%3Fscaling%3Dscale-down-width%26node-id%3D1%253A879" allowfullscreen></iframe></div>
                             
                         </div>
                         <div className="beyond">
@@ -124,9 +142,10 @@ const CaseStyles = styled.div`
 
 .headerimage{
     position: relative;
-    display: block;
+    height: 0;
+    padding-bottom: 51%;
     width: 100%;
-    height: 440px;
+    margin: 15px 0px;
 }
 
 .head{
@@ -146,6 +165,7 @@ const CaseStyles = styled.div`
     h1, h3{
         padding: 0px;
         margin-bottom: 0px;
+        transition: all 0.3s ease-in-out;
     }
 
     h3{
@@ -155,7 +175,7 @@ const CaseStyles = styled.div`
 }
 
 .description{
-    font-size: 0.9rem;
+    font-size: 1.6rem;
     font-weight: 500;
     width: 93%;
     margin: 55px auto;
@@ -173,6 +193,7 @@ const CaseStyles = styled.div`
     p{
         width: 80%;
         margin: auto;
+        word-spacing: 6px;
     }
     }
 }
@@ -207,6 +228,17 @@ const CaseStyles = styled.div`
         -webkit-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
         -moz-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
         box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.33);
+    }
+    iframe{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -25px;
+        bottom: 0;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.43);
+        -moz-box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.43);
+        box-shadow: 0px 5px 16px 1px rgba(57,62,97,0.43);
     }
     .process, .solution{
         width: 100%;
@@ -249,8 +281,11 @@ const CaseStyles = styled.div`
     .title{
         text-align: center;
     }
+    .container{
+        width: 80%;
+    }
 }
-@media (max-width: 34em) {
+@media (max-width: 38em) {
     h1{
         font-size: 3.3rem;
     }   

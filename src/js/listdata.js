@@ -29,7 +29,7 @@ const listdata = [{
     {   
         id: '1',
         text: 'IBX',
-        desc: 'Desktop and mobile solutions for Philadelphia`s largest health insurer, Independence Blue Cross. Designs were created for IBX`s member portal serving 7 million people nationwide.',
+        desc: 'Desktop and mobile solutions for Philadelphia\'s largest health insurer, Independence Blue Cross. Designs were created for IBX\'s member portal serving 7 million people nationwide.',
         mywork: 'user-experience-reasearch / wireframing / high-fidelity-mockups / client-presentation',
         tech: 'Figma',
         img: './img/ibx-final.png',

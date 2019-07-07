@@ -41,7 +41,7 @@ class Souvinear extends React.Component {
                     <div className="caseheader">
                         <div className="headerimage">
                             <iframe title={title}
-                            src={headerimg} frameborder="0" allowfullscreen="">
+                            src={headerimg} frameborder="0" allowfullscreen>
                             </iframe>
                         </div>
                         <div className="title">
@@ -55,7 +55,7 @@ class Souvinear extends React.Component {
                             <div className="halfcont myrole">
                             <h2>my role</h2>
                             <p>
-                                branding / user-experience-reasearch / wireframing / high-fidelity-mockups / all-front-end-development</p></div>
+                                Branding  /  User-Experience-Reasearch  /  Wireframing  /  High-Fidelity-Mockups  /  All-Front-End-Development</p></div>
                             <div className="halfcont mytools">
                                 <h2>my tools</h2>
                                 <p>
@@ -77,17 +77,17 @@ class Souvinear extends React.Component {
                         <div className="process">
                             <h2>The Process</h2>
                             <p>{process[1]}</p>
-                            <video loop muted autoPlay width="100%" height="600" name="surveying" src="./img/surveys.mov"></video>
+                            <video loop muted autoPlay width="100%"  name="surveying" src="./img/surveys.mov"></video>
                             <p>{process[2]}</p>
                             <img width="100%" src="./img/lowfid.png" alt="low fidelity wireframes" ></img>
                             <p>{process[3]}</p>
                             <p>{process[4]}</p>
-                            <video loop muted autoPlay src="./img/styleguide.mp4" alt="style guide" ></video>
+                            <div className="headerimage"><iframe title={title} frameborder="0" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FR22UthMBhhNt8wS3PK1YIiNJ%2FUser-Test-Document%3Fnode-id%3D257%253A1116" allowfullscreen></iframe></div>
                             <p>{process[5]}</p>
-                            <img className="highfid1" src="./img/prototype.gif" alt="prototype" ></img>
+                            <div className="headerimage"><iframe title={title} frameborder="0" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FR22UthMBhhNt8wS3PK1YIiNJ%2FUser-Test-Document%3Fscaling%3Dscale-down%26node-id%3D42%253A3148" allowfullscreen></iframe></div>
                             <p>{process[6]}</p>
                             <p>{process[7]}</p>
-                            <video loop muted autoPlay width="100%" height="600" name="surveying" src="./img/usertesting.mp4"></video>
+                            <video loop muted autoPlay width="100%" name="surveying" src="./img/usertesting.mp4"></video>
                         </div>
                         <div className="solution">
                             <h2>The Result</h2>
@@ -123,12 +123,13 @@ class Souvinear extends React.Component {
 export default Souvinear;
 
 const CaseStyles = styled.div`
-transition: 0.3s all ease-in;
+transition: 0.3s all ease-in-out;
 .bg{
     background-image: url('./img/svnr-bg.png');
     background-size: cover;
     background-position: center;
-    margin-top: 25px;
+    background-color: purple;
+    margin-top: 50px;
     padding-bottom: 75px;
 }
 
@@ -144,9 +145,10 @@ transition: 0.3s all ease-in;
 
 .headerimage{
     position: relative;
-    display: block;
+    height: 0;
+    padding-bottom: 51%;
     width: 100%;
-    height: 440px;
+    margin: 15px 0px;
 }
 
 iframe{
@@ -164,6 +166,7 @@ iframe{
     h1, h3{
         padding: 0px;
         margin-bottom: 0px;
+        transition: all 0.3s ease-in-out;
     }
 
     h3{
@@ -191,6 +194,7 @@ iframe{
     p{
         width: 80%;
         margin: auto;
+        word-spacing: 6px;
     }
     }
 }
@@ -260,5 +264,14 @@ iframe{
         height: 100%;
     }
 }
-
+@media (max-width: 64em) {
+    h1{
+        font-size: 5.5rem;
+    }
+}
+@media (max-width: 38em) {
+    h1{
+        font-size: 3.5rem;
+    }
+}
 `;

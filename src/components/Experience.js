@@ -140,7 +140,7 @@ const ExperienceStyle = styled.div`
   }
 
   @media (max-width: 38em) {
-    padding: 45px 65px;
+    padding: 15px 65px;
   }
   @media (max-width: 26em) {
     padding: 15px 15px;

@@ -1,9 +1,7 @@
 import React from 'react';
-import H1 from './styles/H1';
 import Underline from './styles/Underline';
 import styled from 'styled-components';
 import ButtonStyle from './styles/ButtonStyle';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const accentColor='#21B89A';
 const baseColor='#747474';
