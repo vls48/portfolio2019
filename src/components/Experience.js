@@ -69,10 +69,12 @@ class Experience extends React.Component {
     const { fullpages } = this.state;
     const { sectionsColor } = this.state;
     return (
+      <div className="expwrapper">
       <ExperienceStyle>
         <ReactFullpage
           debug /* Debug logging */
           navigation
+          licenseKey={ '0463DEAE-9F9945FE-83C0D194-A98A7433'}
           anchors={['experience#souvinear', 'experience#ibx', 'experience#bitepick', 'experience#obey', 'experience#design']}
           sectionSelector={SECTION_SEL}
           onLeave={this.onLeave.bind(this)}
@@ -102,6 +104,7 @@ class Experience extends React.Component {
           )}
         />
       </ExperienceStyle>
+      </div>
     );
   }
 }

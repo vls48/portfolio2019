@@ -16,6 +16,7 @@ class Work extends React.Component {
         render() {
             
             return (
+            <div className="construction">
             <AboutStyle baseColor={baseColor} accentColor={accentColor}>
 
                 <p>this page is under construction</p>
@@ -25,6 +26,7 @@ class Work extends React.Component {
                 <Underline buttoncolor={accentColor} color={"#7474742b"} height="1px" width="90%"></Underline>      
 
             </AboutStyle>
+            </div>
         );
     }
 }
@@ -35,6 +37,10 @@ const AboutStyle = styled.div`
     padding: 0px 25px 25px 25px;
     font-family: Roboto;
     transition: 0.3s all ease-in;
+    margin: 0px auto;
+    .construction{
+        width: 100%;
+    }
     h1{
         padding: 0px 0px 0px 25px;
         line-height: 3.7rem;

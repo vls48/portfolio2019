@@ -104,7 +104,7 @@ const listdata = [{
         id: '4',
         text: '...work continued',
         desc: '',
-        img: '',
+        img: './img/more-final.png',
         opacity: '1',
         accentColor: '#929495ad',
         demo: {
